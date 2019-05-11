@@ -1,0 +1,5 @@
+<h1>{{ genre.name }}</h1>
+{% for book in genre.get_books %}
+	<h2>{{ book }}</h2>
+{% endfor %}
+<p>{{ genre.desc }}</p>
