@@ -43,3 +43,6 @@ Only one app is made named 'books'(I tried with 1 app for 1 model but it was bec
 
 ## VIEWS:
 As of now, I have made an indexed and detailed view for each of Book, Author and Genre, and also a User profile view and User registration view.
+
+# SOME USEFUL LINKS
+[This](https://docs.djangoproject.com/en/2.2/),[this](https://tutorial.djangogirls.org/en/) and [this](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK)
