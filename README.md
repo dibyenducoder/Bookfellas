@@ -1,8 +1,8 @@
 # These are the main features of the website:
-1. Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
-2. Let users to register and log in(Progress: register part is done)
-3. Let user catalog books(into three categories: Is read, has read, wants to read)
-4. Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
+[x]1. Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
+[x]2. Let users to register and log in(Progress: register part is done)
+[ ]3. Let user catalog books(into three categories: Is read, has read, wants to read)
+[ ]4. Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
 
 # SOME DJANGO TERMS:
 
