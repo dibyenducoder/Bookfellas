@@ -1,36 +1,36 @@
-#These are the main features of the website:
+# These are the main features of the website:
 1. Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
 2. Let users to register and log in(Progress: register part is done)
 3. Let user catalog books(into three categories: Is read, has read, wants to read)
 4. Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
 
-#SOME DJANGO TERMS:
+# SOME DJANGO TERMS:
 
-##MODELS
+## MODELS
 
 In django, we can create models which are database versions of real-world entities(just like classes, models can have data members and member functions, can be inherited, etc). These models can be related to each other in 3 possible ways:
 1. **One-to-one relationship:** This is same as "is-a" relationship or inheritence in OOP(For ex: A model "sports_car" shares a one-to-one relationship with a "car" ).
 2. **One-to-many relationship:** Object of model A can be related to many objects of model B, but not the other way round(For ex: An album can have many songs, but a song cannot have multiple albums)
 3. **Many-to-many relationship:** Objects of model A can be related to multiples objects of model B, and vice versa(For ex: A band can have multiple singers, a singer can belong to multiple bands; can be recursive also,for ex- a user can have multiple users as followers and can follow multiples users)
 
-##APPS
+## APPS
 
 Apps add modularity to the website. Just like you can break up your C++ code into functions, you can break up a website into apps, each having a different functionality. (For ex- In a college website we might have an admissions app, an exams app, a noticeboard app, etc)
 
-##VIEWS
+## VIEWS
 
 Each url in a website is linked to a function call, which generally returns an HTML page. These functions are called views.
 
-##TEMPLATES and STATIC
+## TEMPLATES and STATIC
 
 All HTML files are included in a 'templates' folder and all static files(files which are independent of any database; and wont change if database is updated) like CSS files, background image are included in a 'static' folder.
 
-#IMPLEMENTATION DETAILS
+# IMPLEMENTATION DETAILS
 
-##MODELS USED:
+## MODELS USED:
 Book,Author,Genre,User,Review,Comment.
 
-##RELATIONS:
+## RELATIONS:
 Book->Author(Many-to-many)
 Book->Genre(Many-to-many)
 Author->Genre(Many-to-many)
@@ -41,8 +41,8 @@ Comment->Comment(One-to-many)
 User->Review(One-to-many)
 User->Comment(One-to-many)
 
-##APPS:
+## APPS:
 Only one app is made named 'books'(I tried with 1 app for 1 model but it was becoming messy with so many files per app).
 
-##VIEWS:
+## VIEWS:
 As of now, I have made an indexed and detailed view for each of Book, Author and Genre, and also a User profile view and User registration view.
