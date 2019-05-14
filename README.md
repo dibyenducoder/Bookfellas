@@ -1,8 +1,8 @@
 # These are the main features of the website:
- [x] Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
- [x] Let users to register and log in(Progress: register part is done)
- [ ] Let user catalog books(into three categories: Is read, has read, wants to read)
- [ ] Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
+- [x] Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
+- [x] Let users to register and log in(Progress: register part is done)
+- [ ] Let user catalog books(into three categories: Is read, has read, wants to read)
+- [ ] Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
 
 # SOME DJANGO TERMS:
 
@@ -31,15 +31,15 @@ All HTML files are included in a 'templates' folder and all static files(files w
 Book,Author,Genre,User,Review,Comment.
 
 ## RELATIONS:
-Book->Author(Many-to-many)
-Book->Genre(Many-to-many)
-Author->Genre(Many-to-many)
-User->Books(Many-to-many)
-Book->Review(One-to-many)
-Review->Comment(One-to-many)
-Comment->Comment(One-to-many)
-User->Review(One-to-many)
-User->Comment(One-to-many)
+- Book->Author(Many-to-many)
+- Book->Genre(Many-to-many)
+- Author->Genre(Many-to-many)
+- User->Books(Many-to-many)
+- Book->Review(One-to-many)
+- Review->Comment(One-to-many)
+- Comment->Comment(One-to-many)
+- User->Review(One-to-many)
+- User->Comment(One-to-many)
 
 ## APPS:
 Only one app is made named 'books'(I tried with 1 app for 1 model but it was becoming messy with so many files per app).
