@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Book, Genre, Author, User
+from django.contrib.auth import authenticate, login
+from .models import Book, Genre, Author, Profile
 from .forms import UserForm
 
 def book_detail(request,pk):
@@ -33,10 +34,10 @@ def genre_index(request):
 	return render(request,'books/genre_index.html', context)
 
 def user_detail(request, pk):
-    user=get_object_or_404(User,pk=pk)
+    user=get_object_or_404(Profile,pk=pk)
     context ={'user':user}
     return render(request,'books/user_detail.html', context)
-
+'''
 def register(request):
     if request.method=='POST':
         form=UserForm(request.POST)
@@ -48,3 +49,20 @@ def register(request):
     else:
         form=UserForm()
     return render(request, 'books/register.html', {'form': form})
+'''
+
+def register(request):
+	if request.method=='POST':
+		form=UserForm(request.POST)
+		if form.is_valid():
+			user=form.save()
+			username=form.cleaned_data.get('username')
+			raw_password=form.cleaned_data.get('password1')
+			user.save()
+			user=authenticate(username=username, password= raw_password)
+			login(request,user)
+			return redirect('book_index')
+
+	else:
+		form=UserForm()
+	return render(request, 'books/register.html', {'form': form})

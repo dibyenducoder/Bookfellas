@@ -1,7 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns=[
+	path('accounts/', include('django.contrib.auth.urls')),
     path('books/<int:pk>/', views.book_detail, name='book_detail'), 
     path('books/', views.book_index, name='book_index'), 
     path('authors/<int:pk>/', views.author_detail, name='author_detail'), 
