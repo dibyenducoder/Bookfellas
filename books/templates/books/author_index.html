@@ -1,8 +1,12 @@
-<ul>
-{% for author in authors %}
-	<li>
-	<h1>{{ author.name }}</h1>
-	<h4>{{ author.desc }}</h4>
-	</li>
-{% endfor %}
-</ul>
+{% extends "books/base.html" %}
+
+{% block content %}
+	<ul>
+	{% for author in authors %}
+		<li>
+		<h1><a href="{% url 'author_detail' author.id %}">{{ author.name }}</a></h1>
+		<h4>{{ author.desc }}</h4>
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

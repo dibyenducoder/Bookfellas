@@ -1,0 +1,27 @@
+nav
+{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+button
+{
+	width: 120px;
+	height: 50px;
+}
+
+.dropdown
+{
+	position: relative;
+}
+
+.dropdown_content
+{
+	padding: 5px;
+	border-radius: 10px;
+	background-color: #dfd6d4;
+	position: absolute;
+	display: none;
+}
+
+.dropdown:hover .dropdown_content {display: block;}

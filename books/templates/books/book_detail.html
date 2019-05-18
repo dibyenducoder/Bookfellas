@@ -1,5 +1,9 @@
-<h1>{{ book.title }}</h1>
-{% for author in book.get_authors %}
-	<h2>{{ author }}</h2>
-{% endfor %}
-<p>{{ book.desc }}</p>
+{% extends "books/base.html" %}
+
+{% block content %}
+	<h1>{{ book.title }}</h1>
+	{% for author in book.get_authors %}
+		<h2>{{ author }}</h2>
+	{% endfor %}
+	<p>{{ book.desc }}</p>
+{% endblock %}

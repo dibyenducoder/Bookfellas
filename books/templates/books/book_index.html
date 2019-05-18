@@ -1,8 +1,12 @@
-<ul>
-{% for book in books %}
-	<li>
-	<h1>{{ book.title }}</h1>
-	<h4>{{ book.ratings }}</h4>
-	</li>
-{% endfor %}
-</ul>
+{% extends "books/base.html" %}
+
+{% block content %}
+	<ul>
+	{% for book in books %}
+		<li>
+		<h1><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></h1>
+		<h4>{{ book.ratings }}</h4>
+		</li>
+	{% endfor %}
+	</ul>
+{%endblock%}

@@ -1,8 +1,12 @@
-<ul>
-{% for genre in genres %}
-	<li>
-	<h1>{{ genre.name }}</h1>
-	<h4>{{ genre.desc }}</h4>
-	</li>
-{% endfor %}
-</ul>
+{% extends "books/base.html" %}
+
+{% block content %}
+	<ul>
+	{% for genre in genres %}
+		<li>
+		<h1><a href="{% url 'genre_detail' genre.id %}">{{ genre.name }}</a></h1>
+		<h4>{{ genre.desc }}</h4>
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+	<nav>
+			<div id="logo">
+				<h3>Bookfellas</h3>
+			</div>
+			<button class="nav_button"><a href="#">HOME</a></button>
+			<button class="nav_button"><a href="#">MY BOOKS</a></button>
+			<div class="dropdown">
+				<button class="nav_button">BROWSE</button>
+				<div class="dropdown_content">
+					<button><a href="{% url 'book_index' %}">Books</a></button>
+    				<button><a href="{% url 'genre_index' %}">Genres</a></button>
+    				<button><a href="{% url 'author_index' %}">Authors</a></button>
+    			</div>
+			</div>
+			<button class="nav_button"><a href="#">MY PROFILE</a></button>
+	</nav>
+
+	{% block content %}{% endblock %}
+</body>
+</html>

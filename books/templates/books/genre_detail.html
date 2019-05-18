@@ -1,5 +1,9 @@
-<h1>{{ genre.name }}</h1>
-{% for book in genre.get_books %}
-	<h2>{{ book }}</h2>
-{% endfor %}
-<p>{{ genre.desc }}</p>
+{% extends "books/base.html" %}
+
+{% block content %}
+	<h1>{{ genre.name }}</h1>
+	{% for book in genre.get_books %}
+		<h2>{{ book }}</h2>
+	{% endfor %}
+	<p>{{ genre.desc }}</p>
+{% endblock %}
