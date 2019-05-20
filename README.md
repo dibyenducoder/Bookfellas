@@ -1,8 +1,10 @@
 # These are the main features of the website:
-- [x] Lets users to search books, genres, and authors (taken from some existing database)(Progress: almost done, except proper HTML and CSS)
-- [x] Let users to register and log in(Progress: register part is done)
+- [x] Lets users to search books, genres, and authors (taken from some existing database)
+- [x] Let users to register and log in
 - [ ] Let user catalog books(into three categories: Is read, has read, wants to read)
 - [ ] Let users rate and review books and further comment on these reviews recursively(ie. comments can have further comments)
+- [ ] Get recommendations based on reading history
+- [ ] Lets users form groups, join groups and chat with other users.
 
 # SOME DJANGO TERMS:
 
